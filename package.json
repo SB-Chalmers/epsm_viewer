@@ -1,0 +1,46 @@
+{
+  "name": "epsm_viewer",
+  "version": "0.1.0",
+  "description": "Embeddable EPSM geometry inspection for browsers and notebooks",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./geometry": {
+      "types": "./dist/geometry.d.ts",
+      "import": "./dist/geometry.js"
+    }
+  },
+  "files": [
+    "dist/*.js",
+    "dist/*.d.ts",
+    "dist/standalone",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/build.mjs",
+    "check": "tsc --noEmit",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@types/three": "0.180.0",
+    "esbuild": "0.25.9",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=20.19"
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+playwright-report/
+test-results/
+output/
+.venv/
+VERSION
+python/epsm_viewer/assets/
+.ruff_cache/
+.DS_Store

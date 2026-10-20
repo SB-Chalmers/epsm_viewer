@@ -1,0 +1,54 @@
+name: Viewer package checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: npm ci
+      - run: npm test
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser
+      - name: Build and check Python display package
+        run: |
+          python -m pip install 'setuptools>=77' wheel '.[test,notebook]'
+          ruff check python tests/python
+          python -m pytest tests/python -q
+          python -m build --no-isolation
+          python -m pip install --no-deps --force-reinstall dist/epsm_viewer-*.whl
+          cd "$RUNNER_TEMP"
+          python - <<'PYTHON'
+          import importlib.resources
+          import sys
+          import epsm_viewer
+          assert 'epsm_core' not in sys.modules and 'anywidget' not in sys.modules
+          assets = importlib.resources.files('epsm_viewer') / 'assets'
+          assert (assets / 'widget.js').is_file() and (assets / 'THREE_LICENSE').is_file()
+          PYTHON
+      - name: Check installed npm artifact
+        run: |
+          npm pack --pack-destination "$RUNNER_TEMP"
+          mkdir "$RUNNER_TEMP/consumer"
+          cd "$RUNNER_TEMP/consumer"
+          npm init -y
+          npm install "$RUNNER_TEMP"/epsm_viewer-*.tgz
+          node --input-type=module -e 'import {validateScene} from "epsm_viewer"; validateScene({schema:"epsm.scene/1",units:"m",up_axis:"Z",objects:[],report:{},diagnostics:{},preparation:null,internal_mass:{}})'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: viewer-${{ matrix.python }}
+          path: |
+            dist/
+            test-results/

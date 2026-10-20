@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Viewer integration fixture</title>
+<style>body{margin:0}#viewer,#second{width:1100px}</style><div id="viewer"></div><div id="second"></div>
+<script type="module">
+import {mountViewer} from '../dist/viewer.bundle.js';
+window.selections = [];
+window.create = scene => window.viewer = mountViewer(document.getElementById('viewer'), scene,
+  {onSelect: selection => window.selections.push(selection)});
+window.createSecond = scene => window.second = mountViewer(document.getElementById('second'), scene);
+window.ready = true;
+</script></html>

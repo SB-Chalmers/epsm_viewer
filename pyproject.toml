@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "epsm_viewer"
+dynamic = ["version"]
+description = "Browser and notebook display for neutral EPSM polygon scenes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+authors = [{name = "Sanjay Somanath", email = "sanjay.somanath@chalmers.se"}]
+dependencies = []
+
+[project.optional-dependencies]
+notebook = ["anywidget>=0.9,<1", "traitlets>=5,<6"]
+test = ["pytest>=8", "build>=1", "ruff>=0.11"]
+
+[project.urls]
+Repository = "https://github.com/SB-Chalmers/epsm_viewer"
+
+[tool.setuptools.dynamic]
+version = {file = ["VERSION"]}
+
+[tool.setuptools.packages.find]
+where = ["python"]
+
+[tool.setuptools.package-data]
+epsm_viewer = ["assets/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests/python"]
+pythonpath = ["python"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

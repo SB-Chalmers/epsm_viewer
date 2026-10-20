@@ -1,0 +1,1469 @@
+{
+  "schema": "epsm.scene/1",
+  "units": "m",
+  "up_axis": "Z",
+  "objects": [
+    {
+      "id": "main_main_0_ceiling_contact_0_1_0",
+      "name": "main_main_0_ceiling_contact_0_1_0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          12.0,
+          0.0,
+          3.0
+        ],
+        [
+          12.0,
+          8.0,
+          3.0
+        ],
+        [
+          0.0,
+          8.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "area_m2": 96.0,
+      "net_area_m2": 96.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.floor.3",
+        "physical_component_ids": []
+      },
+      "boundary": "Surface",
+      "zone": "main_main_0",
+      "construction_name": "intermediate_floor_reverse",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Ceiling",
+        "construction_name": "intermediate_floor_reverse",
+        "outside_boundary_condition": "Surface",
+        "outside_boundary_condition_object": "main_main_1_floor_contact_0_1_0"
+      }
+    },
+    {
+      "id": "main_main_1_floor_contact_0_1_0",
+      "name": "main_main_1_floor_contact_0_1_0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          8.0,
+          3.0
+        ],
+        [
+          12.0,
+          8.0,
+          3.0
+        ],
+        [
+          12.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "area_m2": 96.0,
+      "net_area_m2": 96.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.floor.3",
+        "physical_component_ids": []
+      },
+      "boundary": "Surface",
+      "zone": "main_main_1",
+      "construction_name": "intermediate_floor",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Floor",
+        "construction_name": "intermediate_floor",
+        "outside_boundary_condition": "Surface",
+        "outside_boundary_condition_object": "main_main_0_ceiling_contact_0_1_0"
+      }
+    },
+    {
+      "id": "main_main_0_floor_0",
+      "name": "main_main_0_floor_0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          12.0,
+          8.0,
+          0.0
+        ],
+        [
+          12.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.0,
+          0.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "area_m2": 96.0,
+      "net_area_m2": 96.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.ground_floor",
+        "physical_component_ids": []
+      },
+      "boundary": "Ground",
+      "zone": "main_main_0",
+      "construction_name": "ground",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Floor",
+        "construction_name": "ground",
+        "outside_boundary_condition": "Ground",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_0_wall_0_s0_z0",
+      "name": "main_main_0_wall_0_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          12.0,
+          0.0,
+          0.0
+        ],
+        [
+          12.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "area_m2": 36.0,
+      "net_area_m2": 36.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e0",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e0.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_0",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_0_wall_1_s0_z0",
+      "name": "main_main_0_wall_1_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          12.0,
+          0.0,
+          0.0
+        ],
+        [
+          12.0,
+          8.0,
+          0.0
+        ],
+        [
+          12.0,
+          8.0,
+          3.0
+        ],
+        [
+          12.0,
+          0.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "area_m2": 24.0,
+      "net_area_m2": 24.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e1",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e1.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_0",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_0_wall_2_s0_z0",
+      "name": "main_main_0_wall_2_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          12.0,
+          8.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.0,
+          3.0
+        ],
+        [
+          12.0,
+          8.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "area_m2": 36.0,
+      "net_area_m2": 36.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e2",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e2.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_0",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_0_wall_3_s0_z0",
+      "name": "main_main_0_wall_3_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          8.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          8.0,
+          3.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "area_m2": 24.0,
+      "net_area_m2": 24.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e3",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e3.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_0",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 0.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          }
+        ],
+        "zone_name": "main_main_0",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_1_ceiling_0",
+      "name": "main_main_1_ceiling_0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          8.0,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          6.0
+        ],
+        [
+          12.0,
+          0.0,
+          6.0
+        ],
+        [
+          12.0,
+          8.0,
+          6.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "area_m2": 96.0,
+      "net_area_m2": 96.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.top",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_1",
+      "construction_name": "top",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Roof",
+        "construction_name": "top",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_1_wall_0_s0_z0",
+      "name": "main_main_1_wall_0_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          12.0,
+          0.0,
+          3.0
+        ],
+        [
+          12.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          0.0,
+          6.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "area_m2": 36.0,
+      "net_area_m2": 36.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e0",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e0.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_1",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_1_wall_1_s0_z0",
+      "name": "main_main_1_wall_1_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          12.0,
+          0.0,
+          3.0
+        ],
+        [
+          12.0,
+          8.0,
+          3.0
+        ],
+        [
+          12.0,
+          8.0,
+          6.0
+        ],
+        [
+          12.0,
+          0.0,
+          6.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "area_m2": 24.0,
+      "net_area_m2": 24.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e1",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e1.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_1",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_1_wall_2_s0_z0",
+      "name": "main_main_1_wall_2_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          12.0,
+          8.0,
+          3.0
+        ],
+        [
+          0.0,
+          8.0,
+          3.0
+        ],
+        [
+          0.0,
+          8.0,
+          6.0
+        ],
+        [
+          12.0,
+          8.0,
+          6.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "area_m2": 36.0,
+      "net_area_m2": 36.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e2",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e2.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_1",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 12.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    },
+    {
+      "id": "main_main_1_wall_3_s0_z0",
+      "name": "main_main_1_wall_3_s0_z0",
+      "kind": "surface",
+      "parent": null,
+      "vertices": [
+        [
+          0.0,
+          8.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.0
+        ],
+        [
+          0.0,
+          0.0,
+          6.0
+        ],
+        [
+          0.0,
+          8.0,
+          6.0
+        ]
+      ],
+      "holes": [],
+      "normal": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "area_m2": 24.0,
+      "net_area_m2": 24.0,
+      "metadata": {
+        "part_id": "main",
+        "facade_id": "main.r0.e3",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e3.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "boundary": "Outdoors",
+      "zone": "main_main_1",
+      "construction_name": "wall",
+      "layers": [],
+      "construction_report": {},
+      "epjson": {
+        "vertices": [
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 3.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 0.0,
+            "vertex_z_coordinate": 6.0
+          },
+          {
+            "vertex_x_coordinate": 0.0,
+            "vertex_y_coordinate": 8.0,
+            "vertex_z_coordinate": 6.0
+          }
+        ],
+        "zone_name": "main_main_1",
+        "surface_type": "Wall",
+        "construction_name": "wall",
+        "outside_boundary_condition": "Outdoors",
+        "outside_boundary_condition_object": ""
+      }
+    }
+  ],
+  "report": {
+    "geometry_only": true,
+    "origin_m": [
+      0.0,
+      0.0
+    ],
+    "orientation_deg": 0,
+    "source_crs": "local_metres",
+    "zones": {
+      "main_main_0": {
+        "floor_area_m2": 96.0,
+        "volume_m3": 288.0,
+        "conditioned": true,
+        "part_ids": [
+          "main"
+        ],
+        "elevations_m": [
+          0.0,
+          3.0
+        ],
+        "physical_zone_kinds": [
+          "main"
+        ],
+        "physical_zone_kind": "main"
+      },
+      "main_main_1": {
+        "floor_area_m2": 96.0,
+        "volume_m3": 288.0,
+        "conditioned": true,
+        "part_ids": [
+          "main"
+        ],
+        "elevations_m": [
+          3.0,
+          6.0
+        ],
+        "physical_zone_kinds": [
+          "main"
+        ],
+        "physical_zone_kind": "main"
+      }
+    },
+    "facades": [
+      {
+        "surface": "main_main_0_wall_0_s0_z0",
+        "facade_id": "main.r0.e0",
+        "part_id": "main",
+        "zone": "main_main_0",
+        "storey": 0,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "south",
+        "gross_area_m2": 36.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_1_wall_0_s0_z0",
+        "facade_id": "main.r0.e0",
+        "part_id": "main",
+        "zone": "main_main_1",
+        "storey": 1,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "south",
+        "gross_area_m2": 36.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_0_wall_1_s0_z0",
+        "facade_id": "main.r0.e1",
+        "part_id": "main",
+        "zone": "main_main_0",
+        "storey": 0,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "east",
+        "gross_area_m2": 24.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_1_wall_1_s0_z0",
+        "facade_id": "main.r0.e1",
+        "part_id": "main",
+        "zone": "main_main_1",
+        "storey": 1,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "east",
+        "gross_area_m2": 24.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_0_wall_2_s0_z0",
+        "facade_id": "main.r0.e2",
+        "part_id": "main",
+        "zone": "main_main_0",
+        "storey": 0,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "north",
+        "gross_area_m2": 36.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_1_wall_2_s0_z0",
+        "facade_id": "main.r0.e2",
+        "part_id": "main",
+        "zone": "main_main_1",
+        "storey": 1,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "north",
+        "gross_area_m2": 36.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_0_wall_3_s0_z0",
+        "facade_id": "main.r0.e3",
+        "part_id": "main",
+        "zone": "main_main_0",
+        "storey": 0,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "west",
+        "gross_area_m2": 24.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      },
+      {
+        "surface": "main_main_1_wall_3_s0_z0",
+        "facade_id": "main.r0.e3",
+        "part_id": "main",
+        "zone": "main_main_1",
+        "storey": 1,
+        "local_wwr": 0.0,
+        "requested_wwr": 0.0,
+        "pattern": "scaled",
+        "cardinal": "west",
+        "gross_area_m2": 24.0,
+        "requested_window_area_m2": 0.0,
+        "window_area_m2": 0,
+        "opening_suppression_reason": null
+      }
+    ],
+    "facade_catalog": [
+      {
+        "facade_id": "main.r0.e0",
+        "part_id": "main",
+        "start_m": [
+          0.0,
+          0.0
+        ],
+        "end_m": [
+          12.0,
+          0.0
+        ],
+        "length_m": 12.0,
+        "azimuth_deg": 180.0,
+        "storeys": [
+          0,
+          1
+        ],
+        "storey_elevations_m": [
+          0.0,
+          3.0,
+          6.0
+        ]
+      },
+      {
+        "facade_id": "main.r0.e1",
+        "part_id": "main",
+        "start_m": [
+          12.0,
+          0.0
+        ],
+        "end_m": [
+          12.0,
+          8.0
+        ],
+        "length_m": 8.0,
+        "azimuth_deg": 90.0,
+        "storeys": [
+          0,
+          1
+        ],
+        "storey_elevations_m": [
+          0.0,
+          3.0,
+          6.0
+        ]
+      },
+      {
+        "facade_id": "main.r0.e2",
+        "part_id": "main",
+        "start_m": [
+          12.0,
+          8.0
+        ],
+        "end_m": [
+          0.0,
+          8.0
+        ],
+        "length_m": 12.0,
+        "azimuth_deg": 0.0,
+        "storeys": [
+          0,
+          1
+        ],
+        "storey_elevations_m": [
+          0.0,
+          3.0,
+          6.0
+        ]
+      },
+      {
+        "facade_id": "main.r0.e3",
+        "part_id": "main",
+        "start_m": [
+          0.0,
+          8.0
+        ],
+        "end_m": [
+          0.0,
+          0.0
+        ],
+        "length_m": 8.0,
+        "azimuth_deg": 270.0,
+        "storeys": [
+          0,
+          1
+        ],
+        "storey_elevations_m": [
+          0.0,
+          3.0,
+          6.0
+        ]
+      }
+    ],
+    "surfaces": {
+      "main_main_0_ceiling_contact_0_1_0": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.floor.3",
+        "physical_component_ids": []
+      },
+      "main_main_1_floor_contact_0_1_0": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.floor.3",
+        "physical_component_ids": []
+      },
+      "main_main_0_floor_0": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.ground_floor",
+        "physical_component_ids": []
+      },
+      "main_main_0_wall_0_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e0",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e0.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "main_main_0_wall_1_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e1",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e1.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "main_main_0_wall_2_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e2",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e2.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "main_main_0_wall_3_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e3",
+        "storey": 0,
+        "zone": "main_main_0",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e3.storey.0.wall",
+        "physical_component_ids": []
+      },
+      "main_main_1_ceiling_0": {
+        "part_id": "main",
+        "facade_id": "",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 96.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.top",
+        "physical_component_ids": []
+      },
+      "main_main_1_wall_0_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e0",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e0.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "main_main_1_wall_1_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e1",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e1.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "main_main_1_wall_2_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e2",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 36.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e2.storey.1.wall",
+        "physical_component_ids": []
+      },
+      "main_main_1_wall_3_s0_z0": {
+        "part_id": "main",
+        "facade_id": "main.r0.e3",
+        "storey": 1,
+        "zone": "main_main_1",
+        "area_m2": 24.0,
+        "annotations": [
+          "assumed height"
+        ],
+        "physical_element_id": "main.r0.e3.storey.1.wall",
+        "physical_component_ids": []
+      }
+    },
+    "openings": {},
+    "shading": {},
+    "internal_mass": [],
+    "layout": {},
+    "zoning": {
+      "source_grid_m": null,
+      "partition_corner_alignment_m": null,
+      "requested_mode": "per_storey",
+      "effective_mode": "per_storey",
+      "on_failure": "error",
+      "substituted": false
+    },
+    "context": {
+      "building_count": 0,
+      "surface_count": 0,
+      "buildings": [],
+      "generation": {},
+      "validation": "passed",
+      "representation": "Opaque vertical footprint extrusions for shading only",
+      "cap_tessellation": [],
+      "footprint_cleanup": {
+        "method": "shared_footprint_cleanup_small_context_caps_v1",
+        "tolerance_m": 0.05,
+        "max_symmetric_difference_fraction": 0.005,
+        "max_perimeter_change_fraction": 0.01,
+        "source_inputs_preserved": true,
+        "applied_count": 0,
+        "footprints": []
+      }
+    },
+    "logical_window_count": 0,
+    "thermal_pane_count": 0,
+    "parts": [
+      {
+        "identifier": "main",
+        "footprint": {
+          "exterior": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              12.0,
+              0.0
+            ],
+            [
+              12.0,
+              8.0
+            ],
+            [
+              0.0,
+              8.0
+            ]
+          ],
+          "holes": []
+        },
+        "storey_elevations_m": [
+          0.0,
+          3.0,
+          6.0
+        ],
+        "conditioned": true,
+        "roof": null,
+        "height_status": "assumed",
+        "outline_kind": "facade",
+        "outline_reviewed": false
+      }
+    ],
+    "building_id": "building",
+    "snapshot_id": "980540b90795c760fa83bea96852b033d84d8d1889a843cc00ba10fc2cc834f4"
+  },
+  "diagnostics": {},
+  "preparation": null,
+  "internal_mass": {}
+}

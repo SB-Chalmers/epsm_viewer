@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>EPSM Viewer — synthetic scene</title>
+<!-- SPDX-License-Identifier: MIT. Run npm run build and serve this repository locally. -->
+<div id="viewer"></div><pre id="selection">Select a surface.</pre>
+<script type="module">
+import {mountViewer} from '../dist/viewer.bundle.js';
+// Explicitly load a small tracked teaching fixture, not a live database.
+const scene = await fetch('../tests/fixtures/core-scene.json').then(response => response.json());
+const viewer = mountViewer(document.getElementById('viewer'), scene, {
+  onSelect: selection => {
+    document.getElementById('selection').textContent = JSON.stringify(selection, null, 2);
+  }
+});
+window.addEventListener('pagehide', () => viewer.dispose(), {once:true});
+</script></html>

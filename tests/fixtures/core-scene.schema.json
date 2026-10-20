@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EPSM neutral polygon scene version 1",
+  "type": "object",
+  "required": [
+    "schema",
+    "units",
+    "up_axis",
+    "objects",
+    "report",
+    "diagnostics",
+    "preparation",
+    "internal_mass"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "epsm.scene/1"
+    },
+    "units": {
+      "const": "m"
+    },
+    "up_axis": {
+      "const": "Z"
+    },
+    "objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/object"
+      }
+    },
+    "report": {
+      "type": "object"
+    },
+    "diagnostics": {
+      "type": "object"
+    },
+    "preparation": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "internal_mass": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "point": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "polygon": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/point"
+      },
+      "minItems": 3
+    },
+    "object": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "vertices",
+        "holes",
+        "metadata"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "vertices": {
+          "$ref": "#/$defs/polygon"
+        },
+        "holes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/polygon"
+          }
+        },
+        "metadata": {
+          "type": "object"
+        },
+        "parent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "normal": {
+          "$ref": "#/$defs/point"
+        },
+        "area_m2": {
+          "type": "number",
+          "minimum": 0
+        },
+        "net_area_m2": {
+          "type": "number",
+          "minimum": 0
+        },
+        "boundary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "zone": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "construction_name": {
+          "type": "string"
+        },
+        "layers": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "construction_report": {
+          "type": "object"
+        },
+        "epjson": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}
