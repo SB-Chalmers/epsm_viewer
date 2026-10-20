@@ -1,8 +1,10 @@
 # Private Viewer release preparation
 
-The private `SB-Chalmers/epsm_viewer` repository exists. Version 0.1.0 is a release
-candidate: no branch push, tag, GitHub release, npm or PyPI publication has been
-performed during this preparation. The npm package has `private: true` to prevent
+The private `SB-Chalmers/epsm_viewer` repository has `main` and `dev` initialized
+at the identical-tree extraction bootstrap `0e6fd095418fbbff9d83c796c6893248bffcc6ad`.
+Version 0.1.0 is a release candidate: its PR checks and coordinated release are
+separate from that history-only initialization. No tag, GitHub release, npm or
+PyPI publication has been performed during this preparation. The npm package has `private: true` to prevent
 an accidental package-index publication. The Python package has no publication
 workflow. Publishing remains a coordinated release step.
 
@@ -57,13 +59,15 @@ helpers and MIT notices; they do not need runtime repository access or Core.
 
 ## Remaining coordinated release gates
 
-1. Capture the schema and synthetic fixture through public Core scene APIs at
-   the final Core 0.8 commit and record that exact provenance. The current fixture
-   remains honestly labelled as an earlier candidate in the README.
-2. Review the candidate change, merge through `dev` to `main`, and let the private
+The schema and synthetic fixture have been captured through public installed Core
+0.8.0 APIs from released main `b197e092eb0423de5a9547873a0f596493ab7536`.
+Their hashes and assumptions are retained in
+[`core-scene.provenance.json`](../tests/fixtures/core-scene.provenance.json).
+
+1. Review the candidate change, merge through `dev` to `main`, and let the private
    repository's package-check workflow pass on the resulting commit.
-3. Create the agreed tag and GitHub release and attach those checked npm, wheel
+2. Create the agreed tag and GitHub release and attach those checked npm, wheel
    and source-archive files. No package-index publication is needed.
-4. Only then promote a pinned Viewer revision in consuming compatibility records.
+3. Only then promote a pinned Viewer revision in consuming compatibility records.
    Studio adapters continue to live in Studio; this package does not acquire data
    or implement project/authentication/job APIs.

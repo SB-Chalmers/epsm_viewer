@@ -1,0 +1,25 @@
+{
+  "format": 1,
+  "producer": "epsm_core",
+  "version": "0.8.0",
+  "revision": "b197e092eb0423de5a9547873a0f596493ab7536",
+  "tree": "486dcf62616b76b7b90693fd4d302b844b257dd9",
+  "tag": "v0.8.0",
+  "source": "Installed wheel built from the released Core main commit",
+  "public_operations": [
+    "Footprint.rectangle(12, 8)",
+    "GeometrySpec.from_footprint(..., storeys=2, storey_height_m=3)",
+    "GeometrySpec.scene()",
+    "scene_schema()"
+  ],
+  "assumptions": "Synthetic 12 m by 8 m rectangular footprint, two 3 m storeys; no facade, context, weather, materials or engine. This is geometry-only inspection evidence.",
+  "artifacts": {
+    "core-scene.json": {
+      "sha256": "08a7814ab7a35eac5aab69efd2ab046a7d09a67855273c93ebb5b42da5c43393"
+    },
+    "core-scene.schema.json": {
+      "sha256": "cdbd03b6ad6d8c817b60698fdbdfb79b441dbbbdd51e2d84a759be8417f9f5f1"
+    }
+  },
+  "producer_wheel_sha256": "4881fe649d125114684cc89701d5c3aefb6f86729240b356b21a84e8e5ce9536"
+}

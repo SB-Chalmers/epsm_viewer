@@ -48,8 +48,10 @@ geometry fail explicitly.
 Core owns the source schema through `epsm_core.scene_schema()`. The captured
 [schema](tests/fixtures/core-scene.schema.json) and
 [draft fixture](tests/fixtures/core-scene.json) exercise the cross-package contract.
-They were generated from Core main `43c830b` **plus this extraction's working-tree
-changes**, not an already published Core release. See
+They were generated through the public API of an installed Core **0.8.0** wheel,
+from released main `b197e092eb0423de5a9547873a0f596493ab7536` (`v0.8.0`). The
+[fixture provenance](tests/fixtures/core-scene.provenance.json) retains the
+synthetic inputs and file hashes. See
 [scope and compatibility](docs/extraction.md).
 
 ## Optional Python display
