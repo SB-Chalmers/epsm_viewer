@@ -46,9 +46,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.floor.3",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Surface",
       "zone": "main_main_0",
@@ -128,9 +126,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.floor.3",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Surface",
       "zone": "main_main_1",
@@ -210,9 +206,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.ground_floor",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Ground",
       "zone": "main_main_0",
@@ -292,9 +286,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e0.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_0",
@@ -374,9 +366,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e1.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_0",
@@ -456,9 +446,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e2.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_0",
@@ -538,9 +526,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e3.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_0",
@@ -620,9 +606,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.top",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_1",
@@ -702,9 +686,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e0.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_1",
@@ -784,9 +766,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e1.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_1",
@@ -866,9 +846,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e2.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_1",
@@ -948,9 +926,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e3.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "boundary": "Outdoors",
       "zone": "main_main_1",
@@ -1255,9 +1231,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.floor.3",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_floor_contact_0_1_0": {
         "part_id": "main",
@@ -1267,9 +1241,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.floor.3",
-        "physical_component_ids": []
+        ]
       },
       "main_main_0_floor_0": {
         "part_id": "main",
@@ -1279,9 +1251,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.ground_floor",
-        "physical_component_ids": []
+        ]
       },
       "main_main_0_wall_0_s0_z0": {
         "part_id": "main",
@@ -1291,9 +1261,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e0.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_0_wall_1_s0_z0": {
         "part_id": "main",
@@ -1303,9 +1271,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e1.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_0_wall_2_s0_z0": {
         "part_id": "main",
@@ -1315,9 +1281,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e2.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_0_wall_3_s0_z0": {
         "part_id": "main",
@@ -1327,9 +1291,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e3.storey.0.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_ceiling_0": {
         "part_id": "main",
@@ -1339,9 +1301,7 @@
         "area_m2": 96.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.top",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_wall_0_s0_z0": {
         "part_id": "main",
@@ -1351,9 +1311,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e0.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_wall_1_s0_z0": {
         "part_id": "main",
@@ -1363,9 +1321,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e1.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_wall_2_s0_z0": {
         "part_id": "main",
@@ -1375,9 +1331,7 @@
         "area_m2": 36.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e2.storey.1.wall",
-        "physical_component_ids": []
+        ]
       },
       "main_main_1_wall_3_s0_z0": {
         "part_id": "main",
@@ -1387,9 +1341,7 @@
         "area_m2": 24.0,
         "annotations": [
           "assumed height"
-        ],
-        "physical_element_id": "main.r0.e3.storey.1.wall",
-        "physical_component_ids": []
+        ]
       }
     },
     "openings": {},
@@ -1459,9 +1411,7 @@
         "outline_kind": "facade",
         "outline_reviewed": false
       }
-    ],
-    "building_id": "building",
-    "snapshot_id": "980540b90795c760fa83bea96852b033d84d8d1889a843cc00ba10fc2cc834f4"
+    ]
   },
   "diagnostics": {},
   "preparation": null,
