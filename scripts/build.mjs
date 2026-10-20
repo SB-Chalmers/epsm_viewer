@@ -2,7 +2,9 @@
 import {build} from 'esbuild';
 import {readFile, writeFile, mkdir, copyFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
+import {checkVersion} from './check-version.mjs';
 const root = fileURLToPath(new URL('../', import.meta.url));
+await checkVersion(root);
 const assets = root + 'python/epsm_viewer/assets/';
 await mkdir(assets, {recursive: true});
 const upstreamLicense = await readFile(root + 'node_modules/three/LICENSE', 'utf8');
@@ -18,7 +20,6 @@ await writeFile(assets + 'index.html', html);
 await copyFile(root + 'LICENSE', assets + 'LICENSE');
 await writeFile(assets + 'THREE_LICENSE', upstreamLicense);
 await copyFile(root + 'THIRD_PARTY_NOTICES.md', assets + 'THIRD_PARTY_NOTICES.md');
-await writeFile(root + 'VERSION', JSON.parse(await readFile(root + 'package.json', 'utf8')).version + '\n');
 // Standalone assets are also usable from the npm tarball without Python.
 await mkdir(root + 'dist/standalone', {recursive: true});
 for (const name of ['browser.js', 'widget.js', 'index.html', 'LICENSE', 'THREE_LICENSE', 'THIRD_PARTY_NOTICES.md']) {

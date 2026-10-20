@@ -1,4 +1,4 @@
-node_modules/
+node_modules
 dist/
 build/
 *.egg-info/
@@ -8,7 +8,6 @@ playwright-report/
 test-results/
 output/
 .venv/
-VERSION
 python/epsm_viewer/assets/
 .ruff_cache/
 .DS_Store

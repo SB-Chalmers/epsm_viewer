@@ -1,33 +1,104 @@
 name: Viewer package checks
-on: [push, pull_request, workflow_dispatch]
+on:
+  pull_request:
+    branches: [dev, main]
+  push:
+    branches: [main]
+  workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: viewer-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 jobs:
-  package:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python: ['3.11', '3.13']
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: npm
       - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python }}
+          python-version: '3.13'
       - run: npm ci
-      - run: npm test
+      - name: Build JavaScript once and run geometry/version tests
+        run: npm test
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
-      - name: Build and check Python display package
+      - name: Build and inspect Python and npm distributions
         run: |
-          python -m pip install 'setuptools>=77' wheel '.[test,notebook]'
-          ruff check python tests/python
-          python -m pytest tests/python -q
+          python -m pip install 'setuptools>=77' wheel build ruff
+          ruff check build_backend.py python tests/python scripts/check-distributions.py
           python -m build --no-isolation
-          python -m pip install --no-deps --force-reinstall dist/epsm_viewer-*.whl
+          npm pack --ignore-scripts --pack-destination dist
+          python scripts/check-distributions.py
+      - name: Rebuild clean Python source archive without Node
+        run: |
+          python - <<'PYTHON'
+          import os
+          import pathlib
+          import tarfile
+          destination = pathlib.Path(os.environ['RUNNER_TEMP']) / 'viewer-sdist'
+          destination.mkdir()
+          with tarfile.open(next(pathlib.Path('dist').glob('*.tar.gz'))) as archive:
+              archive.extractall(destination, filter='data')
+          PYTHON
+          PYTHON_EXE="$(command -v python)"
+          VIEWER_VERSION="$(cat VERSION)"
+          mkdir "$RUNNER_TEMP/no-node"
+          PATH="$RUNNER_TEMP/no-node" "$PYTHON_EXE" -m build --wheel --no-isolation --outdir "$RUNNER_TEMP/rebuilt" "$RUNNER_TEMP/viewer-sdist/epsm_viewer-$VIEWER_VERSION"
+      - name: Check installed npm artifact once
+        run: |
+          VIEWER_TARBALL="$GITHUB_WORKSPACE/dist/epsm_viewer-$(cat VERSION).tgz"
+          mkdir "$RUNNER_TEMP/consumer"
+          cd "$RUNNER_TEMP/consumer"
+          npm init -y
+          npm install --ignore-scripts "$VIEWER_TARBALL"
+          node --input-type=module -e 'import {mountViewer,validateScene} from "epsm_viewer"; if(typeof mountViewer!=="function")throw Error("Missing public mountViewer"); validateScene({schema:"epsm.scene/1",units:"m",up_axis:"Z",objects:[],report:{},diagnostics:{},preparation:null,internal_mass:{}})'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: viewer-distributions
+          path: |
+            dist/*.whl
+            dist/*.tar.gz
+            dist/*.tgz
+          if-no-files-found: error
+          retention-days: 14
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: viewer-browser-failures
+          path: test-results/
+          retention-days: 14
+  installed-python:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      matrix:
+        python: ['3.11', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: viewer-distributions
+          path: dist
+      - name: Test the installed wheel
+        run: |
+          python -m pip install 'setuptools>=77' wheel pytest 'anywidget>=0.9,<1' 'traitlets>=5,<6'
+          python -m pip install --no-deps dist/epsm_viewer-*.whl
+          python -m pytest -o pythonpath= tests/python -q
+          python -m pip check
           cd "$RUNNER_TEMP"
           python - <<'PYTHON'
           import importlib.resources
@@ -37,18 +108,3 @@ jobs:
           assets = importlib.resources.files('epsm_viewer') / 'assets'
           assert (assets / 'widget.js').is_file() and (assets / 'THREE_LICENSE').is_file()
           PYTHON
-      - name: Check installed npm artifact
-        run: |
-          npm pack --pack-destination "$RUNNER_TEMP"
-          mkdir "$RUNNER_TEMP/consumer"
-          cd "$RUNNER_TEMP/consumer"
-          npm init -y
-          npm install "$RUNNER_TEMP"/epsm_viewer-*.tgz
-          node --input-type=module -e 'import {validateScene} from "epsm_viewer"; validateScene({schema:"epsm.scene/1",units:"m",up_axis:"Z",objects:[],report:{},diagnostics:{},preparation:null,internal_mass:{}})'
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: viewer-${{ matrix.python }}
-          path: |
-            dist/
-            test-results/

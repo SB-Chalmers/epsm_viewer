@@ -1,3 +1,3 @@
-include VERSION package.json LICENSE THIRD_PARTY_NOTICES.md README.md
+include VERSION package.json build_backend.py LICENSE THIRD_PARTY_NOTICES.md README.md
 recursive-include python/epsm_viewer/assets *
 recursive-include tests/python *.py
