@@ -1,6 +1,11 @@
 {
   "name": "epsm_viewer",
   "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SB-Chalmers/epsm_viewer.git"
+  },
   "description": "Embeddable EPSM geometry inspection for browsers and notebooks",
   "type": "module",
   "license": "MIT",
@@ -22,9 +27,11 @@
     "dist/standalone",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md",
+    "VERSION",
     "README.md"
   ],
   "scripts": {
+    "prebuild": "node scripts/check-version.mjs",
     "build": "tsc && node scripts/build.mjs",
     "check": "tsc --noEmit",
     "test": "npm run build && node --test tests/*.test.mjs",
