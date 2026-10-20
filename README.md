@@ -2,8 +2,9 @@
 
 An embeddable TypeScript viewer for building geometry and its inspection evidence.
 It serves EPSM Studio, teaching notebooks and other consumers of loaded metric
-scenes. This is an **unreleased local extraction**, version 0.1.0; no package-index
-or GitHub publication has been performed.
+scenes. This is an **unreleased 0.1.0 candidate** in the private
+[SB-Chalmers/epsm_viewer repository](https://github.com/SB-Chalmers/epsm_viewer).
+No tag, release or package-index publication has been performed.
 
 The viewer owns rendering, polygon triangulation, window cutouts, selection,
 camera controls, display filters and resource cleanup. Core owns physical geometry
@@ -13,8 +14,9 @@ and jobs. This package does not query databases, choose assumptions or simulate.
 ## Browser use
 
 The npm package exports TypeScript declarations and ESM modules. Install a built
-tarball with `npm install ./epsm_viewer-0.1.0.tgz` until a package registry release
-is available. Three.js 0.180.0 is the declared rendering dependency.
+tarball with `npm install ./epsm_viewer-0.1.0.tgz`. Distribution uses private
+GitHub artifacts; see [artifact installation](docs/release.md). Three.js 0.180.0
+is the declared rendering dependency.
 
 ```ts
 import {mountViewer, type Scene} from 'epsm_viewer';
@@ -81,7 +83,8 @@ without a loopback connection. Importing the package does none of these things.
 
 ## Develop and verify
 
-Use Node.js 20.19 or newer and npm for the browser package.
+Use Node.js 22 and npm for the browser package (the package requires at least
+Node.js 20.19).
 
 ```sh
 npm ci
@@ -90,15 +93,23 @@ npm run test:browser
 python -m pip install '.[test,notebook]'
 python -m pytest tests/python
 python -m build
-npm pack
+npm pack --ignore-scripts --pack-destination dist
+python scripts/check-distributions.py
 ```
 
 Run `npx playwright install chromium` once when Chromium is not installed. Browser
 checks require a local HTTP port and actual WebGL rendering. `npm run build`
-generates the offline browser/widget assets and `VERSION` from **package.json**, the
-single package-version source, before Python packaging. Build the Python source
-archive/wheel after that step. Clean wheel and npm-tarball installation checks
-must pass before a release. CI runs the package, browser and installed checks.
+generates the offline browser/widget assets. **package.json** owns the version;
+tracked `VERSION` and the npm lockfile must agree before the build starts. A
+mismatch fails without rewriting either file. Build the Python source archive
+and wheel after preparing those assets. The Python build backend checks the
+version and resources and never invokes Node. The source archive includes the
+prepared assets so its wheel can be rebuilt without Node.
+
+CI builds JavaScript and runs the actual browser and npm consumer checks once.
+Python 3.11 and 3.13 each test the installed wheel, including bundled resources
+and notices. Clean source-archive rebuild and distribution inspection are release
+gates. See the [private release preparation](docs/release.md) for artifact commands.
 
 The tests cover opening area, concave/courtyard geometry, scene validity,
 selection, isolated instances, replacement and disposal, bundle access and

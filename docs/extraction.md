@@ -34,6 +34,12 @@ modules move out of Core. Use `geometry.scene()` / `building.scene()` followed b
 the explicitly chosen viewer display helper. Updating installed package
 compatibility manifests and publishing releases remain separate release steps.
 
-`package.json` is the version source. Build writes `VERSION`, which Python
-packaging reads. TypeScript public types describe the neutral scene; they do not
+`package.json` is the version source. Tracked `VERSION`, which Python packaging
+reads, and the npm lockfile must agree before building. Python packaging requires
+prepared browser/widget resources and never calls Node. TypeScript public types
+describe the neutral scene; they do not
 copy the Core Building model or its scientific validation rules.
+
+The private GitHub repository exists; the 0.1.0 candidate has not been pushed,
+tagged or published. See [release preparation](release.md) for private artifact
+installation and remaining release gates.
