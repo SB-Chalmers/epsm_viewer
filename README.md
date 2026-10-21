@@ -1,4 +1,15 @@
-# epsm_viewer
+# EPSM Viewer
+
+<!-- EPSM introduction: Pocket CAD -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/brand/epsm_viewer-dark.png">
+  <img src="docs/assets/brand/epsm_viewer.png" width="64" height="64" alt="EPSM Viewer — inspectable building model">
+</picture>
+
+Inspect building geometry in an interactive 3D viewer for web apps and Python notebooks.
+
+[Explore the EPSM platform](https://github.com/SB-Chalmers/epsm/blob/main/docs/platform.md)
+<!-- /EPSM introduction -->
 
 An embeddable TypeScript viewer for building geometry and its inspection evidence.
 It serves EPSM Studio, teaching notebooks and other consumers of loaded metric
